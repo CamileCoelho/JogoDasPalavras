@@ -60,36 +60,36 @@
             btnDel = new Button();
             btnReset = new Button();
             tableLayoutPanel1 = new TableLayoutPanel();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
-            textBox6 = new TextBox();
-            textBox7 = new TextBox();
-            textBox8 = new TextBox();
-            textBox9 = new TextBox();
-            textBox10 = new TextBox();
-            textBox11 = new TextBox();
-            textBox12 = new TextBox();
-            textBox13 = new TextBox();
-            textBox14 = new TextBox();
-            textBox15 = new TextBox();
-            textBox16 = new TextBox();
-            textBox17 = new TextBox();
-            textBox18 = new TextBox();
-            textBox19 = new TextBox();
-            textBox20 = new TextBox();
-            textBox21 = new TextBox();
-            textBox22 = new TextBox();
-            textBox23 = new TextBox();
-            textBox24 = new TextBox();
-            textBox25 = new TextBox();
-            textBox26 = new TextBox();
-            textBox27 = new TextBox();
-            textBox28 = new TextBox();
-            textBox29 = new TextBox();
-            textBox30 = new TextBox();
+            txt1A = new TextBox();
+            txt1B = new TextBox();
+            txt1C = new TextBox();
+            txt1D = new TextBox();
+            txt1E = new TextBox();
+            txt2A = new TextBox();
+            txt2B = new TextBox();
+            txt2C = new TextBox();
+            txt2D = new TextBox();
+            txt2E = new TextBox();
+            txt3A = new TextBox();
+            txt3B = new TextBox();
+            txt3C = new TextBox();
+            txt3D = new TextBox();
+            txt3E = new TextBox();
+            txt4A = new TextBox();
+            txt4B = new TextBox();
+            txt4C = new TextBox();
+            txt4D = new TextBox();
+            txt4E = new TextBox();
+            txt5A = new TextBox();
+            txt5B = new TextBox();
+            txt5C = new TextBox();
+            txt5D = new TextBox();
+            txt5E = new TextBox();
+            txt6A = new TextBox();
+            txt6B = new TextBox();
+            txt6C = new TextBox();
+            txt6D = new TextBox();
+            txt6E = new TextBox();
             pnlBotoes.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
@@ -451,36 +451,36 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
-            tableLayoutPanel1.Controls.Add(textBox1, 0, 0);
-            tableLayoutPanel1.Controls.Add(textBox2, 1, 0);
-            tableLayoutPanel1.Controls.Add(textBox3, 2, 0);
-            tableLayoutPanel1.Controls.Add(textBox4, 3, 0);
-            tableLayoutPanel1.Controls.Add(textBox5, 4, 0);
-            tableLayoutPanel1.Controls.Add(textBox6, 0, 1);
-            tableLayoutPanel1.Controls.Add(textBox7, 1, 1);
-            tableLayoutPanel1.Controls.Add(textBox8, 2, 1);
-            tableLayoutPanel1.Controls.Add(textBox9, 3, 1);
-            tableLayoutPanel1.Controls.Add(textBox10, 4, 1);
-            tableLayoutPanel1.Controls.Add(textBox11, 0, 2);
-            tableLayoutPanel1.Controls.Add(textBox12, 1, 2);
-            tableLayoutPanel1.Controls.Add(textBox13, 2, 2);
-            tableLayoutPanel1.Controls.Add(textBox14, 3, 2);
-            tableLayoutPanel1.Controls.Add(textBox15, 4, 2);
-            tableLayoutPanel1.Controls.Add(textBox16, 0, 3);
-            tableLayoutPanel1.Controls.Add(textBox17, 1, 3);
-            tableLayoutPanel1.Controls.Add(textBox18, 2, 3);
-            tableLayoutPanel1.Controls.Add(textBox19, 3, 3);
-            tableLayoutPanel1.Controls.Add(textBox20, 4, 3);
-            tableLayoutPanel1.Controls.Add(textBox21, 0, 4);
-            tableLayoutPanel1.Controls.Add(textBox22, 1, 4);
-            tableLayoutPanel1.Controls.Add(textBox23, 2, 4);
-            tableLayoutPanel1.Controls.Add(textBox24, 3, 4);
-            tableLayoutPanel1.Controls.Add(textBox25, 4, 4);
-            tableLayoutPanel1.Controls.Add(textBox26, 0, 5);
-            tableLayoutPanel1.Controls.Add(textBox27, 1, 5);
-            tableLayoutPanel1.Controls.Add(textBox28, 2, 5);
-            tableLayoutPanel1.Controls.Add(textBox29, 3, 5);
-            tableLayoutPanel1.Controls.Add(textBox30, 4, 5);
+            tableLayoutPanel1.Controls.Add(txt1A, 0, 0);
+            tableLayoutPanel1.Controls.Add(txt1B, 1, 0);
+            tableLayoutPanel1.Controls.Add(txt1C, 2, 0);
+            tableLayoutPanel1.Controls.Add(txt1D, 3, 0);
+            tableLayoutPanel1.Controls.Add(txt1E, 4, 0);
+            tableLayoutPanel1.Controls.Add(txt2A, 0, 1);
+            tableLayoutPanel1.Controls.Add(txt2B, 1, 1);
+            tableLayoutPanel1.Controls.Add(txt2C, 2, 1);
+            tableLayoutPanel1.Controls.Add(txt2D, 3, 1);
+            tableLayoutPanel1.Controls.Add(txt2E, 4, 1);
+            tableLayoutPanel1.Controls.Add(txt3A, 0, 2);
+            tableLayoutPanel1.Controls.Add(txt3B, 1, 2);
+            tableLayoutPanel1.Controls.Add(txt3C, 2, 2);
+            tableLayoutPanel1.Controls.Add(txt3D, 3, 2);
+            tableLayoutPanel1.Controls.Add(txt3E, 4, 2);
+            tableLayoutPanel1.Controls.Add(txt4A, 0, 3);
+            tableLayoutPanel1.Controls.Add(txt4B, 1, 3);
+            tableLayoutPanel1.Controls.Add(txt4C, 2, 3);
+            tableLayoutPanel1.Controls.Add(txt4D, 3, 3);
+            tableLayoutPanel1.Controls.Add(txt4E, 4, 3);
+            tableLayoutPanel1.Controls.Add(txt5A, 0, 4);
+            tableLayoutPanel1.Controls.Add(txt5B, 1, 4);
+            tableLayoutPanel1.Controls.Add(txt5C, 2, 4);
+            tableLayoutPanel1.Controls.Add(txt5D, 3, 4);
+            tableLayoutPanel1.Controls.Add(txt5E, 4, 4);
+            tableLayoutPanel1.Controls.Add(txt6A, 0, 5);
+            tableLayoutPanel1.Controls.Add(txt6B, 1, 5);
+            tableLayoutPanel1.Controls.Add(txt6C, 2, 5);
+            tableLayoutPanel1.Controls.Add(txt6D, 3, 5);
+            tableLayoutPanel1.Controls.Add(txt6E, 4, 5);
             tableLayoutPanel1.Location = new Point(71, 30);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 6;
@@ -493,215 +493,215 @@
             tableLayoutPanel1.Size = new Size(386, 455);
             tableLayoutPanel1.TabIndex = 5;
             // 
-            // textBox1
+            // txt1A
             // 
-            textBox1.Location = new Point(3, 3);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(71, 23);
-            textBox1.TabIndex = 0;
+            txt1A.Location = new Point(3, 3);
+            txt1A.Name = "txt1A";
+            txt1A.Size = new Size(71, 23);
+            txt1A.TabIndex = 0;
             // 
-            // textBox2
+            // txt1B
             // 
-            textBox2.Location = new Point(80, 3);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(71, 23);
-            textBox2.TabIndex = 1;
+            txt1B.Location = new Point(80, 3);
+            txt1B.Name = "txt1B";
+            txt1B.Size = new Size(71, 23);
+            txt1B.TabIndex = 1;
             // 
-            // textBox3
+            // txt1C
             // 
-            textBox3.Location = new Point(157, 3);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(71, 23);
-            textBox3.TabIndex = 2;
+            txt1C.Location = new Point(157, 3);
+            txt1C.Name = "txt1C";
+            txt1C.Size = new Size(71, 23);
+            txt1C.TabIndex = 2;
             // 
-            // textBox4
+            // txt1D
             // 
-            textBox4.Location = new Point(234, 3);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(71, 23);
-            textBox4.TabIndex = 3;
+            txt1D.Location = new Point(234, 3);
+            txt1D.Name = "txt1D";
+            txt1D.Size = new Size(71, 23);
+            txt1D.TabIndex = 3;
             // 
-            // textBox5
+            // txt1E
             // 
-            textBox5.Location = new Point(311, 3);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(72, 23);
-            textBox5.TabIndex = 4;
+            txt1E.Location = new Point(311, 3);
+            txt1E.Name = "txt1E";
+            txt1E.Size = new Size(72, 23);
+            txt1E.TabIndex = 4;
             // 
-            // textBox6
+            // txt2A
             // 
-            textBox6.Location = new Point(3, 78);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(71, 23);
-            textBox6.TabIndex = 5;
+            txt2A.Location = new Point(3, 78);
+            txt2A.Name = "txt2A";
+            txt2A.Size = new Size(71, 23);
+            txt2A.TabIndex = 5;
             // 
-            // textBox7
+            // txt2B
             // 
-            textBox7.Location = new Point(80, 78);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(71, 23);
-            textBox7.TabIndex = 6;
+            txt2B.Location = new Point(80, 78);
+            txt2B.Name = "txt2B";
+            txt2B.Size = new Size(71, 23);
+            txt2B.TabIndex = 6;
             // 
-            // textBox8
+            // txt2C
             // 
-            textBox8.Location = new Point(157, 78);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(71, 23);
-            textBox8.TabIndex = 7;
+            txt2C.Location = new Point(157, 78);
+            txt2C.Name = "txt2C";
+            txt2C.Size = new Size(71, 23);
+            txt2C.TabIndex = 7;
             // 
-            // textBox9
+            // txt2D
             // 
-            textBox9.Location = new Point(234, 78);
-            textBox9.Name = "textBox9";
-            textBox9.Size = new Size(71, 23);
-            textBox9.TabIndex = 8;
+            txt2D.Location = new Point(234, 78);
+            txt2D.Name = "txt2D";
+            txt2D.Size = new Size(71, 23);
+            txt2D.TabIndex = 8;
             // 
-            // textBox10
+            // txt2E
             // 
-            textBox10.Location = new Point(311, 78);
-            textBox10.Name = "textBox10";
-            textBox10.Size = new Size(72, 23);
-            textBox10.TabIndex = 9;
+            txt2E.Location = new Point(311, 78);
+            txt2E.Name = "txt2E";
+            txt2E.Size = new Size(72, 23);
+            txt2E.TabIndex = 9;
             // 
-            // textBox11
+            // txt3A
             // 
-            textBox11.Location = new Point(3, 153);
-            textBox11.Name = "textBox11";
-            textBox11.Size = new Size(71, 23);
-            textBox11.TabIndex = 10;
+            txt3A.Location = new Point(3, 153);
+            txt3A.Name = "txt3A";
+            txt3A.Size = new Size(71, 23);
+            txt3A.TabIndex = 10;
             // 
-            // textBox12
+            // txt3B
             // 
-            textBox12.Location = new Point(80, 153);
-            textBox12.Name = "textBox12";
-            textBox12.Size = new Size(71, 23);
-            textBox12.TabIndex = 11;
+            txt3B.Location = new Point(80, 153);
+            txt3B.Name = "txt3B";
+            txt3B.Size = new Size(71, 23);
+            txt3B.TabIndex = 11;
             // 
-            // textBox13
+            // txt3C
             // 
-            textBox13.Location = new Point(157, 153);
-            textBox13.Name = "textBox13";
-            textBox13.Size = new Size(71, 23);
-            textBox13.TabIndex = 12;
+            txt3C.Location = new Point(157, 153);
+            txt3C.Name = "txt3C";
+            txt3C.Size = new Size(71, 23);
+            txt3C.TabIndex = 12;
             // 
-            // textBox14
+            // txt3D
             // 
-            textBox14.Location = new Point(234, 153);
-            textBox14.Name = "textBox14";
-            textBox14.Size = new Size(71, 23);
-            textBox14.TabIndex = 13;
+            txt3D.Location = new Point(234, 153);
+            txt3D.Name = "txt3D";
+            txt3D.Size = new Size(71, 23);
+            txt3D.TabIndex = 13;
             // 
-            // textBox15
+            // txt3E
             // 
-            textBox15.Location = new Point(311, 153);
-            textBox15.Name = "textBox15";
-            textBox15.Size = new Size(72, 23);
-            textBox15.TabIndex = 14;
+            txt3E.Location = new Point(311, 153);
+            txt3E.Name = "txt3E";
+            txt3E.Size = new Size(72, 23);
+            txt3E.TabIndex = 14;
             // 
-            // textBox16
+            // txt4A
             // 
-            textBox16.Location = new Point(3, 228);
-            textBox16.Name = "textBox16";
-            textBox16.Size = new Size(71, 23);
-            textBox16.TabIndex = 15;
+            txt4A.Location = new Point(3, 228);
+            txt4A.Name = "txt4A";
+            txt4A.Size = new Size(71, 23);
+            txt4A.TabIndex = 15;
             // 
-            // textBox17
+            // txt4B
             // 
-            textBox17.Location = new Point(80, 228);
-            textBox17.Name = "textBox17";
-            textBox17.Size = new Size(71, 23);
-            textBox17.TabIndex = 16;
+            txt4B.Location = new Point(80, 228);
+            txt4B.Name = "txt4B";
+            txt4B.Size = new Size(71, 23);
+            txt4B.TabIndex = 16;
             // 
-            // textBox18
+            // txt4C
             // 
-            textBox18.Location = new Point(157, 228);
-            textBox18.Name = "textBox18";
-            textBox18.Size = new Size(71, 23);
-            textBox18.TabIndex = 17;
+            txt4C.Location = new Point(157, 228);
+            txt4C.Name = "txt4C";
+            txt4C.Size = new Size(71, 23);
+            txt4C.TabIndex = 17;
             // 
-            // textBox19
+            // txt4D
             // 
-            textBox19.Location = new Point(234, 228);
-            textBox19.Name = "textBox19";
-            textBox19.Size = new Size(71, 23);
-            textBox19.TabIndex = 18;
+            txt4D.Location = new Point(234, 228);
+            txt4D.Name = "txt4D";
+            txt4D.Size = new Size(71, 23);
+            txt4D.TabIndex = 18;
             // 
-            // textBox20
+            // txt4E
             // 
-            textBox20.Location = new Point(311, 228);
-            textBox20.Name = "textBox20";
-            textBox20.Size = new Size(72, 23);
-            textBox20.TabIndex = 19;
+            txt4E.Location = new Point(311, 228);
+            txt4E.Name = "txt4E";
+            txt4E.Size = new Size(72, 23);
+            txt4E.TabIndex = 19;
             // 
-            // textBox21
+            // txt5A
             // 
-            textBox21.Location = new Point(3, 303);
-            textBox21.Name = "textBox21";
-            textBox21.Size = new Size(71, 23);
-            textBox21.TabIndex = 20;
+            txt5A.Location = new Point(3, 303);
+            txt5A.Name = "txt5A";
+            txt5A.Size = new Size(71, 23);
+            txt5A.TabIndex = 20;
             // 
-            // textBox22
+            // txt5B
             // 
-            textBox22.Location = new Point(80, 303);
-            textBox22.Name = "textBox22";
-            textBox22.Size = new Size(71, 23);
-            textBox22.TabIndex = 21;
+            txt5B.Location = new Point(80, 303);
+            txt5B.Name = "txt5B";
+            txt5B.Size = new Size(71, 23);
+            txt5B.TabIndex = 21;
             // 
-            // textBox23
+            // txt5C
             // 
-            textBox23.Location = new Point(157, 303);
-            textBox23.Name = "textBox23";
-            textBox23.Size = new Size(71, 23);
-            textBox23.TabIndex = 22;
+            txt5C.Location = new Point(157, 303);
+            txt5C.Name = "txt5C";
+            txt5C.Size = new Size(71, 23);
+            txt5C.TabIndex = 22;
             // 
-            // textBox24
+            // txt5D
             // 
-            textBox24.Location = new Point(234, 303);
-            textBox24.Name = "textBox24";
-            textBox24.Size = new Size(71, 23);
-            textBox24.TabIndex = 23;
+            txt5D.Location = new Point(234, 303);
+            txt5D.Name = "txt5D";
+            txt5D.Size = new Size(71, 23);
+            txt5D.TabIndex = 23;
             // 
-            // textBox25
+            // txt5E
             // 
-            textBox25.Location = new Point(311, 303);
-            textBox25.Name = "textBox25";
-            textBox25.Size = new Size(72, 23);
-            textBox25.TabIndex = 24;
+            txt5E.Location = new Point(311, 303);
+            txt5E.Name = "txt5E";
+            txt5E.Size = new Size(72, 23);
+            txt5E.TabIndex = 24;
             // 
-            // textBox26
+            // txt6A
             // 
-            textBox26.Location = new Point(3, 378);
-            textBox26.Name = "textBox26";
-            textBox26.Size = new Size(71, 23);
-            textBox26.TabIndex = 25;
+            txt6A.Location = new Point(3, 378);
+            txt6A.Name = "txt6A";
+            txt6A.Size = new Size(71, 23);
+            txt6A.TabIndex = 25;
             // 
-            // textBox27
+            // txt6B
             // 
-            textBox27.Location = new Point(80, 378);
-            textBox27.Name = "textBox27";
-            textBox27.Size = new Size(71, 23);
-            textBox27.TabIndex = 26;
+            txt6B.Location = new Point(80, 378);
+            txt6B.Name = "txt6B";
+            txt6B.Size = new Size(71, 23);
+            txt6B.TabIndex = 26;
             // 
-            // textBox28
+            // txt6C
             // 
-            textBox28.Location = new Point(157, 378);
-            textBox28.Name = "textBox28";
-            textBox28.Size = new Size(71, 23);
-            textBox28.TabIndex = 27;
+            txt6C.Location = new Point(157, 378);
+            txt6C.Name = "txt6C";
+            txt6C.Size = new Size(71, 23);
+            txt6C.TabIndex = 27;
             // 
-            // textBox29
+            // txt6D
             // 
-            textBox29.Location = new Point(234, 378);
-            textBox29.Name = "textBox29";
-            textBox29.Size = new Size(71, 23);
-            textBox29.TabIndex = 28;
+            txt6D.Location = new Point(234, 378);
+            txt6D.Name = "txt6D";
+            txt6D.Size = new Size(71, 23);
+            txt6D.TabIndex = 28;
             // 
-            // textBox30
+            // txt6E
             // 
-            textBox30.Location = new Point(311, 378);
-            textBox30.Name = "textBox30";
-            textBox30.Size = new Size(72, 23);
-            textBox30.TabIndex = 29;
+            txt6E.Location = new Point(311, 378);
+            txt6E.Name = "txt6E";
+            txt6E.Size = new Size(72, 23);
+            txt6E.TabIndex = 29;
             // 
             // Form1
             // 
@@ -755,35 +755,35 @@
         private Button btnDel;
         private Button btnReset;
         private TableLayoutPanel tableLayoutPanel1;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private TextBox textBox5;
-        private TextBox textBox6;
-        private TextBox textBox7;
-        private TextBox textBox8;
-        private TextBox textBox9;
-        private TextBox textBox10;
-        private TextBox textBox11;
-        private TextBox textBox12;
-        private TextBox textBox13;
-        private TextBox textBox14;
-        private TextBox textBox15;
-        private TextBox textBox16;
-        private TextBox textBox17;
-        private TextBox textBox18;
-        private TextBox textBox19;
-        private TextBox textBox20;
-        private TextBox textBox21;
-        private TextBox textBox22;
-        private TextBox textBox23;
-        private TextBox textBox24;
-        private TextBox textBox25;
-        private TextBox textBox26;
-        private TextBox textBox27;
-        private TextBox textBox28;
-        private TextBox textBox29;
-        private TextBox textBox30;
+        private TextBox txt1A;
+        private TextBox txt1B;
+        private TextBox txt1C;
+        private TextBox txt1D;
+        private TextBox txt1E;
+        private TextBox txt2A;
+        private TextBox txt2B;
+        private TextBox txt2C;
+        private TextBox txt2D;
+        private TextBox txt2E;
+        private TextBox txt3A;
+        private TextBox txt3B;
+        private TextBox txt3C;
+        private TextBox txt3D;
+        private TextBox txt3E;
+        private TextBox txt4A;
+        private TextBox txt4B;
+        private TextBox txt4C;
+        private TextBox txt4D;
+        private TextBox txt4E;
+        private TextBox txt5A;
+        private TextBox txt5B;
+        private TextBox txt5C;
+        private TextBox txt5D;
+        private TextBox txt5E;
+        private TextBox txt6A;
+        private TextBox txt6B;
+        private TextBox txt6C;
+        private TextBox txt6D;
+        private TextBox txt6E;
     }
 }

@@ -101,27 +101,43 @@ namespace JogoDasPalavras.WinFormsApp
             }
             if (jogo.palavraSecreta != palavraImputada1)
             {
+                if (jogo.palavraSecreta[0] == palavraImputada1[0])
+                {
+                    txt1A.BackColor = Color.Green;
+                    PintarBotaoClicado(txt1A, Color.Green);
+                }
+                if (jogo.palavraSecreta[1] == palavraImputada1[1])
+                {
+                    txt1B.BackColor = Color.Green;
+                    PintarBotaoClicado(txt1B, Color.Green);
+                }
+                if (jogo.palavraSecreta[2] == palavraImputada1[2])
+                {
+                    txt1C.BackColor = Color.Green;
+                    PintarBotaoClicado(txt1C, Color.Green);
+                }
+                if (jogo.palavraSecreta[3] == palavraImputada1[3])
+                {
+                    txt1D.BackColor = Color.Green;
+                    PintarBotaoClicado(txt1D, Color.Green);
+                }
+                if (jogo.palavraSecreta[4] == palavraImputada1[4])
+                {
+                    txt1E.BackColor = Color.Green;
+                    PintarBotaoClicado(txt1E, Color.Green);
+                }
                 foreach (Char c in palavraImputada1)
                 {
-                    if (jogo.palavraSecreta[0] == palavraImputada1[0])
+                    foreach (Char i in jogo.palavraSecreta)
                     {
-                        txt1A.BackColor = Color.Green;
-                    }
-                    if (jogo.palavraSecreta[1] == palavraImputada1[1])
-                    {
-                        txt1B.BackColor = Color.Green;
-                    }
-                    if (jogo.palavraSecreta[2] == palavraImputada1[2])
-                    {
-                        txt1C.BackColor = Color.Green;
-                    }
-                    if (jogo.palavraSecreta[3] == palavraImputada1[3])
-                    {
-                        txt1D.BackColor = Color.Green;
-                    }
-                    if (jogo.palavraSecreta[4] == palavraImputada1[4])
-                    {
-                        txt1E.BackColor = Color.Green;
+                        if (c == jogo.palavraSecreta[i])
+                        {
+                            PintarBotaoClicado(txt1D, Color.Yellow);
+                        }
+                        else
+                        {
+                            PintarBotaoClicado(txt1D, Color.Gray);
+                        }
                     }
                 }
             }
@@ -218,72 +234,48 @@ namespace JogoDasPalavras.WinFormsApp
         {
             if (!string.IsNullOrEmpty(txt1E.Text))
             {
-                LimparBotaoClicado();
+                PintarBotaoClicado(txt1E, Color.Empty);
                 txt1E.Text = txt1E.Text.Substring(0, txt1E.Text.Length - 1);
                 txt1E.BackColor = Color.Empty;
                 return;
             }
             if (!string.IsNullOrEmpty(txt1D.Text))
             {
-                foreach (Button botao in pnlBotoes.Controls)
-                {
-                    if (botao.Text == txt1D.Text)
-                    {
-                        botao.BackColor = Color.Empty;
-                    }
-                }
+                PintarBotaoClicado(txt1D, Color.Empty);
                 txt1D.Text = txt1D.Text.Substring(0, txt1D.Text.Length - 1);
                 txt1D.BackColor = Color.Empty;
                 return;
             }
             if (!string.IsNullOrEmpty(txt1C.Text))
             {
-                foreach (Button botao in pnlBotoes.Controls)
-                {
-                    if (botao.Text == txt1C.Text)
-                    {
-                        botao.BackColor = Color.Empty;
-                    }
-                }
+                PintarBotaoClicado(txt1C, Color.Empty);
                 txt1C.Text = txt1C.Text.Substring(0, txt1C.Text.Length - 1);
                 txt1C.BackColor = Color.Empty;
                 return;
             }
             if (!string.IsNullOrEmpty(txt1B.Text))
             {
-                foreach (Button botao in pnlBotoes.Controls)
-                {
-                    if (botao.Text == txt1B.Text)
-                    {
-                        botao.BackColor = Color.Empty;
-                    }
-                }
+                PintarBotaoClicado(txt1B, Color.Empty);
                 txt1B.Text = txt1B.Text.Substring(0, txt1B.Text.Length - 1);
                 txt1B.BackColor = Color.Empty;
                 return;
             }
             if (!string.IsNullOrEmpty(txt1A.Text))
             {
-                foreach (Button botao in pnlBotoes.Controls)
-                {
-                    if (botao.Text == txt1A.Text)
-                    {
-                        botao.BackColor = Color.Empty;
-                    }
-                }
+                PintarBotaoClicado(txt1A, Color.Empty);
                 txt1A.Text = txt1A.Text.Substring(0, txt1A.Text.Length - 1);
                 txt1A.BackColor = Color.Empty;
                 return;
             }
         }
 
-        private void LimparBotaoClicado()
+        private void PintarBotaoClicado(TextBox txt, Color cor)
         {
             foreach (Button botao in pnlBotoes.Controls)
             {
-                if (botao.Text == txt1E.Text)
+                if (botao.Text == txt.Text)
                 {
-                    botao.BackColor = Color.Empty;
+                    botao.BackColor = cor;
                 }
             }
         }

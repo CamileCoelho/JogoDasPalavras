@@ -1,3 +1,6 @@
+using static System.Net.Mime.MediaTypeNames;
+using System.Runtime.ConstrainedExecution;
+
 namespace JogoDasPalavras.WinFormsApp
 {
     public partial class Form1 : Form
@@ -39,8 +42,6 @@ namespace JogoDasPalavras.WinFormsApp
             btnY.Click += AtribuirLetraLinha1;
             btnZ.Click += AtribuirLetraLinha1;
             btn«.Click += AtribuirLetraLinha1;
-
-            VerificarPalavraCorreta();
         }
         private void ReiniciarJogo(object? sender, EventArgs e)
         {
@@ -74,8 +75,6 @@ namespace JogoDasPalavras.WinFormsApp
             btnZ.Click += AtribuirLetraLinha1;
             btn«.Click += AtribuirLetraLinha1;
 
-            VerificarPalavraCorreta();
-
             foreach (Button botao in pnlBotoes.Controls)
             {
                 botao.Enabled = true;
@@ -101,6 +100,23 @@ namespace JogoDasPalavras.WinFormsApp
             }
             if (jogo.palavraSecreta != palavraImputada1)
             {
+                foreach (Char c in jogo.palavraSecreta)
+                {
+                    if (palavraImputada1.Contains(c))
+                    {
+                        PintarBotaoETxtBoxClicado(c, Color.Yellow);
+                    }
+                    else
+                    {
+                        foreach (TextBox txt in tblLinha1.Controls)
+                        {
+                            if (txt.Text != c.ToString().ToUpper())
+                            {
+                                txt.BackColor = Color.Gray;
+                            }
+                        }
+                    }
+                }
                 if (jogo.palavraSecreta[0] == palavraImputada1[0])
                 {
                     txt1A.BackColor = Color.Green;
@@ -126,20 +142,6 @@ namespace JogoDasPalavras.WinFormsApp
                     txt1E.BackColor = Color.Green;
                     PintarBotaoClicado(txt1E, Color.Green);
                 }
-                foreach (Char c in palavraImputada1)
-                {
-                    foreach (Char i in jogo.palavraSecreta)
-                    {
-                        if (c == jogo.palavraSecreta[i])
-                        {
-                            PintarBotaoClicado(txt1D, Color.Yellow);
-                        }
-                        else
-                        {
-                            PintarBotaoClicado(txt1D, Color.Gray);
-                        }
-                    }
-                }
             }
         }
 
@@ -149,8 +151,6 @@ namespace JogoDasPalavras.WinFormsApp
             if (string.IsNullOrEmpty(txt1A.Text))
             {
                 txt1A.Text = botaoClicado.Text;
-                //botaoClicado.BackColor = Color.Green;
-                //txt1A.BackColor = Color.Green;
                 return;
             }
             if (string.IsNullOrEmpty(txt1B.Text))
@@ -276,6 +276,23 @@ namespace JogoDasPalavras.WinFormsApp
                 if (botao.Text == txt.Text)
                 {
                     botao.BackColor = cor;
+                }
+            }
+        }
+        private void PintarBotaoETxtBoxClicado(Char c, Color cor)
+        {
+            foreach (Button botao in pnlBotoes.Controls)
+            {
+                if (botao.Text == c.ToString().ToUpper())
+                {
+                    botao.BackColor = cor;
+                }
+            }
+            foreach (TextBox txt in tblLinha1.Controls)
+            {
+                if (txt.Text == c.ToString().ToUpper())
+                {
+                    txt.BackColor = cor;
                 }
             }
         }

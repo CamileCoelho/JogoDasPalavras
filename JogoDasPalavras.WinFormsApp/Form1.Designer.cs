@@ -59,7 +59,6 @@
             btnEnter = new Button();
             btnDel = new Button();
             btnReset = new Button();
-            tableLayoutPanel1 = new TableLayoutPanel();
             txt1A = new TextBox();
             txt1B = new TextBox();
             txt1C = new TextBox();
@@ -90,8 +89,19 @@
             txt6C = new TextBox();
             txt6D = new TextBox();
             txt6E = new TextBox();
+            tblLinha2 = new TableLayoutPanel();
+            tblLinha3 = new TableLayoutPanel();
+            tblLinha4 = new TableLayoutPanel();
+            tblLinha5 = new TableLayoutPanel();
+            tblLinha6 = new TableLayoutPanel();
+            tblLinha1 = new TableLayoutPanel();
             pnlBotoes.SuspendLayout();
-            tableLayoutPanel1.SuspendLayout();
+            tblLinha2.SuspendLayout();
+            tblLinha3.SuspendLayout();
+            tblLinha4.SuspendLayout();
+            tblLinha5.SuspendLayout();
+            tblLinha6.SuspendLayout();
+            tblLinha1.SuspendLayout();
             SuspendLayout();
             // 
             // pnlBotoes
@@ -422,6 +432,7 @@
             btnEnter.TabIndex = 2;
             btnEnter.Text = "ENTER";
             btnEnter.UseVisualStyleBackColor = true;
+            btnEnter.Click += btnEnter_Click;
             // 
             // btnDel
             // 
@@ -432,6 +443,7 @@
             btnDel.TabIndex = 3;
             btnDel.Text = "⌫";
             btnDel.UseVisualStyleBackColor = true;
+            btnDel.Click += btnDel_Click;
             // 
             // btnReset
             // 
@@ -443,281 +455,397 @@
             btnReset.Text = "REINICIAR";
             btnReset.UseVisualStyleBackColor = true;
             // 
-            // tableLayoutPanel1
-            // 
-            tableLayoutPanel1.ColumnCount = 5;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
-            tableLayoutPanel1.Controls.Add(txt1A, 0, 0);
-            tableLayoutPanel1.Controls.Add(txt1B, 1, 0);
-            tableLayoutPanel1.Controls.Add(txt1C, 2, 0);
-            tableLayoutPanel1.Controls.Add(txt1D, 3, 0);
-            tableLayoutPanel1.Controls.Add(txt1E, 4, 0);
-            tableLayoutPanel1.Controls.Add(txt2A, 0, 1);
-            tableLayoutPanel1.Controls.Add(txt2B, 1, 1);
-            tableLayoutPanel1.Controls.Add(txt2C, 2, 1);
-            tableLayoutPanel1.Controls.Add(txt2D, 3, 1);
-            tableLayoutPanel1.Controls.Add(txt2E, 4, 1);
-            tableLayoutPanel1.Controls.Add(txt3A, 0, 2);
-            tableLayoutPanel1.Controls.Add(txt3B, 1, 2);
-            tableLayoutPanel1.Controls.Add(txt3C, 2, 2);
-            tableLayoutPanel1.Controls.Add(txt3D, 3, 2);
-            tableLayoutPanel1.Controls.Add(txt3E, 4, 2);
-            tableLayoutPanel1.Controls.Add(txt4A, 0, 3);
-            tableLayoutPanel1.Controls.Add(txt4B, 1, 3);
-            tableLayoutPanel1.Controls.Add(txt4C, 2, 3);
-            tableLayoutPanel1.Controls.Add(txt4D, 3, 3);
-            tableLayoutPanel1.Controls.Add(txt4E, 4, 3);
-            tableLayoutPanel1.Controls.Add(txt5A, 0, 4);
-            tableLayoutPanel1.Controls.Add(txt5B, 1, 4);
-            tableLayoutPanel1.Controls.Add(txt5C, 2, 4);
-            tableLayoutPanel1.Controls.Add(txt5D, 3, 4);
-            tableLayoutPanel1.Controls.Add(txt5E, 4, 4);
-            tableLayoutPanel1.Controls.Add(txt6A, 0, 5);
-            tableLayoutPanel1.Controls.Add(txt6B, 1, 5);
-            tableLayoutPanel1.Controls.Add(txt6C, 2, 5);
-            tableLayoutPanel1.Controls.Add(txt6D, 3, 5);
-            tableLayoutPanel1.Controls.Add(txt6E, 4, 5);
-            tableLayoutPanel1.Location = new Point(71, 30);
-            tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 6;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 16.6666679F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 16.6666679F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 16.6666679F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 16.6666679F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 16.6666679F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 16.6666679F));
-            tableLayoutPanel1.Size = new Size(386, 455);
-            tableLayoutPanel1.TabIndex = 5;
-            // 
             // txt1A
             // 
+            txt1A.Font = new Font("Segoe UI", 28F, FontStyle.Regular, GraphicsUnit.Point);
             txt1A.Location = new Point(3, 3);
             txt1A.Name = "txt1A";
-            txt1A.Size = new Size(71, 23);
+            txt1A.Size = new Size(71, 57);
             txt1A.TabIndex = 0;
             // 
             // txt1B
             // 
+            txt1B.Font = new Font("Segoe UI", 28F, FontStyle.Regular, GraphicsUnit.Point);
             txt1B.Location = new Point(80, 3);
             txt1B.Name = "txt1B";
-            txt1B.Size = new Size(71, 23);
+            txt1B.Size = new Size(71, 57);
             txt1B.TabIndex = 1;
             // 
             // txt1C
             // 
+            txt1C.Font = new Font("Segoe UI", 28F, FontStyle.Regular, GraphicsUnit.Point);
             txt1C.Location = new Point(157, 3);
             txt1C.Name = "txt1C";
-            txt1C.Size = new Size(71, 23);
+            txt1C.Size = new Size(71, 57);
             txt1C.TabIndex = 2;
             // 
             // txt1D
             // 
+            txt1D.Font = new Font("Segoe UI", 28F, FontStyle.Regular, GraphicsUnit.Point);
             txt1D.Location = new Point(234, 3);
             txt1D.Name = "txt1D";
-            txt1D.Size = new Size(71, 23);
+            txt1D.Size = new Size(71, 57);
             txt1D.TabIndex = 3;
             // 
             // txt1E
             // 
+            txt1E.Font = new Font("Segoe UI", 28F, FontStyle.Regular, GraphicsUnit.Point);
             txt1E.Location = new Point(311, 3);
             txt1E.Name = "txt1E";
-            txt1E.Size = new Size(72, 23);
+            txt1E.Size = new Size(72, 57);
             txt1E.TabIndex = 4;
             // 
             // txt2A
             // 
-            txt2A.Location = new Point(3, 78);
+            txt2A.Font = new Font("Segoe UI", 28F, FontStyle.Regular, GraphicsUnit.Point);
+            txt2A.Location = new Point(3, 3);
             txt2A.Name = "txt2A";
-            txt2A.Size = new Size(71, 23);
+            txt2A.Size = new Size(71, 57);
             txt2A.TabIndex = 5;
             // 
             // txt2B
             // 
-            txt2B.Location = new Point(80, 78);
+            txt2B.Font = new Font("Segoe UI", 28F, FontStyle.Regular, GraphicsUnit.Point);
+            txt2B.Location = new Point(80, 3);
             txt2B.Name = "txt2B";
-            txt2B.Size = new Size(71, 23);
+            txt2B.Size = new Size(71, 57);
             txt2B.TabIndex = 6;
             // 
             // txt2C
             // 
-            txt2C.Location = new Point(157, 78);
+            txt2C.Font = new Font("Segoe UI", 28F, FontStyle.Regular, GraphicsUnit.Point);
+            txt2C.Location = new Point(157, 3);
             txt2C.Name = "txt2C";
-            txt2C.Size = new Size(71, 23);
+            txt2C.Size = new Size(71, 57);
             txt2C.TabIndex = 7;
             // 
             // txt2D
             // 
-            txt2D.Location = new Point(234, 78);
+            txt2D.Font = new Font("Segoe UI", 28F, FontStyle.Regular, GraphicsUnit.Point);
+            txt2D.Location = new Point(234, 3);
             txt2D.Name = "txt2D";
-            txt2D.Size = new Size(71, 23);
+            txt2D.Size = new Size(71, 57);
             txt2D.TabIndex = 8;
             // 
             // txt2E
             // 
-            txt2E.Location = new Point(311, 78);
+            txt2E.Font = new Font("Segoe UI", 28F, FontStyle.Regular, GraphicsUnit.Point);
+            txt2E.Location = new Point(311, 3);
             txt2E.Name = "txt2E";
-            txt2E.Size = new Size(72, 23);
+            txt2E.Size = new Size(72, 57);
             txt2E.TabIndex = 9;
             // 
             // txt3A
             // 
-            txt3A.Location = new Point(3, 153);
+            txt3A.Font = new Font("Segoe UI", 28F, FontStyle.Regular, GraphicsUnit.Point);
+            txt3A.Location = new Point(3, 3);
             txt3A.Name = "txt3A";
-            txt3A.Size = new Size(71, 23);
+            txt3A.Size = new Size(71, 57);
             txt3A.TabIndex = 10;
             // 
             // txt3B
             // 
-            txt3B.Location = new Point(80, 153);
+            txt3B.Font = new Font("Segoe UI", 28F, FontStyle.Regular, GraphicsUnit.Point);
+            txt3B.Location = new Point(80, 3);
             txt3B.Name = "txt3B";
-            txt3B.Size = new Size(71, 23);
+            txt3B.Size = new Size(71, 57);
             txt3B.TabIndex = 11;
             // 
             // txt3C
             // 
-            txt3C.Location = new Point(157, 153);
+            txt3C.Font = new Font("Segoe UI", 28F, FontStyle.Regular, GraphicsUnit.Point);
+            txt3C.Location = new Point(157, 3);
             txt3C.Name = "txt3C";
-            txt3C.Size = new Size(71, 23);
+            txt3C.Size = new Size(71, 57);
             txt3C.TabIndex = 12;
             // 
             // txt3D
             // 
-            txt3D.Location = new Point(234, 153);
+            txt3D.Font = new Font("Segoe UI", 28F, FontStyle.Regular, GraphicsUnit.Point);
+            txt3D.Location = new Point(234, 3);
             txt3D.Name = "txt3D";
-            txt3D.Size = new Size(71, 23);
+            txt3D.Size = new Size(71, 57);
             txt3D.TabIndex = 13;
             // 
             // txt3E
             // 
-            txt3E.Location = new Point(311, 153);
+            txt3E.Font = new Font("Segoe UI", 28F, FontStyle.Regular, GraphicsUnit.Point);
+            txt3E.Location = new Point(311, 3);
             txt3E.Name = "txt3E";
-            txt3E.Size = new Size(72, 23);
+            txt3E.Size = new Size(72, 57);
             txt3E.TabIndex = 14;
             // 
             // txt4A
             // 
-            txt4A.Location = new Point(3, 228);
+            txt4A.Font = new Font("Segoe UI", 28F, FontStyle.Regular, GraphicsUnit.Point);
+            txt4A.Location = new Point(3, 3);
             txt4A.Name = "txt4A";
-            txt4A.Size = new Size(71, 23);
+            txt4A.Size = new Size(71, 57);
             txt4A.TabIndex = 15;
             // 
             // txt4B
             // 
-            txt4B.Location = new Point(80, 228);
+            txt4B.Font = new Font("Segoe UI", 28F, FontStyle.Regular, GraphicsUnit.Point);
+            txt4B.Location = new Point(80, 3);
             txt4B.Name = "txt4B";
-            txt4B.Size = new Size(71, 23);
+            txt4B.Size = new Size(71, 57);
             txt4B.TabIndex = 16;
             // 
             // txt4C
             // 
-            txt4C.Location = new Point(157, 228);
+            txt4C.Font = new Font("Segoe UI", 28F, FontStyle.Regular, GraphicsUnit.Point);
+            txt4C.Location = new Point(157, 3);
             txt4C.Name = "txt4C";
-            txt4C.Size = new Size(71, 23);
+            txt4C.Size = new Size(71, 57);
             txt4C.TabIndex = 17;
             // 
             // txt4D
             // 
-            txt4D.Location = new Point(234, 228);
+            txt4D.Font = new Font("Segoe UI", 28F, FontStyle.Regular, GraphicsUnit.Point);
+            txt4D.Location = new Point(234, 3);
             txt4D.Name = "txt4D";
-            txt4D.Size = new Size(71, 23);
+            txt4D.Size = new Size(71, 57);
             txt4D.TabIndex = 18;
             // 
             // txt4E
             // 
-            txt4E.Location = new Point(311, 228);
+            txt4E.Font = new Font("Segoe UI", 28F, FontStyle.Regular, GraphicsUnit.Point);
+            txt4E.Location = new Point(311, 3);
             txt4E.Name = "txt4E";
-            txt4E.Size = new Size(72, 23);
+            txt4E.Size = new Size(72, 57);
             txt4E.TabIndex = 19;
             // 
             // txt5A
             // 
-            txt5A.Location = new Point(3, 303);
+            txt5A.Font = new Font("Segoe UI", 28F, FontStyle.Regular, GraphicsUnit.Point);
+            txt5A.Location = new Point(3, 3);
             txt5A.Name = "txt5A";
-            txt5A.Size = new Size(71, 23);
+            txt5A.Size = new Size(71, 57);
             txt5A.TabIndex = 20;
             // 
             // txt5B
             // 
-            txt5B.Location = new Point(80, 303);
+            txt5B.Font = new Font("Segoe UI", 28F, FontStyle.Regular, GraphicsUnit.Point);
+            txt5B.Location = new Point(80, 3);
             txt5B.Name = "txt5B";
-            txt5B.Size = new Size(71, 23);
+            txt5B.Size = new Size(71, 57);
             txt5B.TabIndex = 21;
             // 
             // txt5C
             // 
-            txt5C.Location = new Point(157, 303);
+            txt5C.Font = new Font("Segoe UI", 28F, FontStyle.Regular, GraphicsUnit.Point);
+            txt5C.Location = new Point(157, 3);
             txt5C.Name = "txt5C";
-            txt5C.Size = new Size(71, 23);
+            txt5C.Size = new Size(71, 57);
             txt5C.TabIndex = 22;
             // 
             // txt5D
             // 
-            txt5D.Location = new Point(234, 303);
+            txt5D.Font = new Font("Segoe UI", 28F, FontStyle.Regular, GraphicsUnit.Point);
+            txt5D.Location = new Point(234, 3);
             txt5D.Name = "txt5D";
-            txt5D.Size = new Size(71, 23);
+            txt5D.Size = new Size(71, 57);
             txt5D.TabIndex = 23;
             // 
             // txt5E
             // 
-            txt5E.Location = new Point(311, 303);
+            txt5E.Font = new Font("Segoe UI", 28F, FontStyle.Regular, GraphicsUnit.Point);
+            txt5E.Location = new Point(311, 3);
             txt5E.Name = "txt5E";
-            txt5E.Size = new Size(72, 23);
+            txt5E.Size = new Size(72, 57);
             txt5E.TabIndex = 24;
             // 
             // txt6A
             // 
-            txt6A.Location = new Point(3, 378);
+            txt6A.Font = new Font("Segoe UI", 28F, FontStyle.Regular, GraphicsUnit.Point);
+            txt6A.Location = new Point(3, 3);
             txt6A.Name = "txt6A";
-            txt6A.Size = new Size(71, 23);
+            txt6A.Size = new Size(71, 57);
             txt6A.TabIndex = 25;
             // 
             // txt6B
             // 
-            txt6B.Location = new Point(80, 378);
+            txt6B.Font = new Font("Segoe UI", 28F, FontStyle.Regular, GraphicsUnit.Point);
+            txt6B.Location = new Point(80, 3);
             txt6B.Name = "txt6B";
-            txt6B.Size = new Size(71, 23);
+            txt6B.Size = new Size(71, 57);
             txt6B.TabIndex = 26;
             // 
             // txt6C
             // 
-            txt6C.Location = new Point(157, 378);
+            txt6C.Font = new Font("Segoe UI", 28F, FontStyle.Regular, GraphicsUnit.Point);
+            txt6C.Location = new Point(157, 3);
             txt6C.Name = "txt6C";
-            txt6C.Size = new Size(71, 23);
+            txt6C.Size = new Size(71, 57);
             txt6C.TabIndex = 27;
             // 
             // txt6D
             // 
-            txt6D.Location = new Point(234, 378);
+            txt6D.Font = new Font("Segoe UI", 28F, FontStyle.Regular, GraphicsUnit.Point);
+            txt6D.Location = new Point(234, 3);
             txt6D.Name = "txt6D";
-            txt6D.Size = new Size(71, 23);
+            txt6D.Size = new Size(71, 57);
             txt6D.TabIndex = 28;
             // 
             // txt6E
             // 
-            txt6E.Location = new Point(311, 378);
+            txt6E.Font = new Font("Segoe UI", 28F, FontStyle.Regular, GraphicsUnit.Point);
+            txt6E.Location = new Point(311, 3);
             txt6E.Name = "txt6E";
-            txt6E.Size = new Size(72, 23);
+            txt6E.Size = new Size(72, 57);
             txt6E.TabIndex = 29;
+            // 
+            // tblLinha2
+            // 
+            tblLinha2.ColumnCount = 5;
+            tblLinha2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
+            tblLinha2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
+            tblLinha2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
+            tblLinha2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
+            tblLinha2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
+            tblLinha2.Controls.Add(txt2E, 4, 0);
+            tblLinha2.Controls.Add(txt2D, 3, 0);
+            tblLinha2.Controls.Add(txt2C, 2, 0);
+            tblLinha2.Controls.Add(txt2B, 1, 0);
+            tblLinha2.Controls.Add(txt2A, 0, 0);
+            tblLinha2.Location = new Point(114, 90);
+            tblLinha2.Name = "tblLinha2";
+            tblLinha2.RowCount = 1;
+            tblLinha2.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tblLinha2.Size = new Size(386, 64);
+            tblLinha2.TabIndex = 30;
+            // 
+            // tblLinha3
+            // 
+            tblLinha3.ColumnCount = 5;
+            tblLinha3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
+            tblLinha3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
+            tblLinha3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
+            tblLinha3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
+            tblLinha3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
+            tblLinha3.Controls.Add(txt3E, 4, 0);
+            tblLinha3.Controls.Add(txt3D, 3, 0);
+            tblLinha3.Controls.Add(txt3C, 2, 0);
+            tblLinha3.Controls.Add(txt3B, 1, 0);
+            tblLinha3.Controls.Add(txt3A, 0, 0);
+            tblLinha3.Location = new Point(114, 169);
+            tblLinha3.Name = "tblLinha3";
+            tblLinha3.RowCount = 1;
+            tblLinha3.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tblLinha3.Size = new Size(386, 64);
+            tblLinha3.TabIndex = 31;
+            // 
+            // tblLinha4
+            // 
+            tblLinha4.ColumnCount = 5;
+            tblLinha4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
+            tblLinha4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
+            tblLinha4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
+            tblLinha4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
+            tblLinha4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
+            tblLinha4.Controls.Add(txt4E, 4, 0);
+            tblLinha4.Controls.Add(txt4D, 3, 0);
+            tblLinha4.Controls.Add(txt4C, 2, 0);
+            tblLinha4.Controls.Add(txt4B, 1, 0);
+            tblLinha4.Controls.Add(txt4A, 0, 0);
+            tblLinha4.Location = new Point(114, 249);
+            tblLinha4.Name = "tblLinha4";
+            tblLinha4.RowCount = 1;
+            tblLinha4.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tblLinha4.Size = new Size(386, 64);
+            tblLinha4.TabIndex = 32;
+            // 
+            // tblLinha5
+            // 
+            tblLinha5.ColumnCount = 5;
+            tblLinha5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
+            tblLinha5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
+            tblLinha5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
+            tblLinha5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
+            tblLinha5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
+            tblLinha5.Controls.Add(txt5E, 4, 0);
+            tblLinha5.Controls.Add(txt5D, 3, 0);
+            tblLinha5.Controls.Add(txt5C, 2, 0);
+            tblLinha5.Controls.Add(txt5B, 1, 0);
+            tblLinha5.Controls.Add(txt5A, 0, 0);
+            tblLinha5.Location = new Point(114, 331);
+            tblLinha5.Name = "tblLinha5";
+            tblLinha5.RowCount = 1;
+            tblLinha5.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tblLinha5.Size = new Size(386, 64);
+            tblLinha5.TabIndex = 33;
+            // 
+            // tblLinha6
+            // 
+            tblLinha6.ColumnCount = 5;
+            tblLinha6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
+            tblLinha6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
+            tblLinha6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
+            tblLinha6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
+            tblLinha6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
+            tblLinha6.Controls.Add(txt6E, 4, 0);
+            tblLinha6.Controls.Add(txt6A, 0, 0);
+            tblLinha6.Controls.Add(txt6B, 1, 0);
+            tblLinha6.Controls.Add(txt6D, 3, 0);
+            tblLinha6.Controls.Add(txt6C, 2, 0);
+            tblLinha6.Location = new Point(114, 412);
+            tblLinha6.Name = "tblLinha6";
+            tblLinha6.RowCount = 1;
+            tblLinha6.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tblLinha6.Size = new Size(386, 64);
+            tblLinha6.TabIndex = 34;
+            // 
+            // tblLinha1
+            // 
+            tblLinha1.ColumnCount = 5;
+            tblLinha1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
+            tblLinha1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
+            tblLinha1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
+            tblLinha1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
+            tblLinha1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
+            tblLinha1.Controls.Add(txt1E, 4, 0);
+            tblLinha1.Controls.Add(txt1A, 0, 0);
+            tblLinha1.Controls.Add(txt1D, 3, 0);
+            tblLinha1.Controls.Add(txt1B, 1, 0);
+            tblLinha1.Controls.Add(txt1C, 2, 0);
+            tblLinha1.Location = new Point(114, 12);
+            tblLinha1.Name = "tblLinha1";
+            tblLinha1.RowCount = 1;
+            tblLinha1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tblLinha1.Size = new Size(386, 64);
+            tblLinha1.TabIndex = 35;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(671, 729);
-            Controls.Add(tableLayoutPanel1);
+            ClientSize = new Size(670, 723);
+            Controls.Add(tblLinha1);
+            Controls.Add(tblLinha6);
+            Controls.Add(tblLinha5);
+            Controls.Add(tblLinha4);
+            Controls.Add(tblLinha3);
             Controls.Add(btnReset);
             Controls.Add(btnDel);
             Controls.Add(btnEnter);
             Controls.Add(pnlBotoes);
+            Controls.Add(tblLinha2);
+            MinimumSize = new Size(686, 736);
             Name = "Form1";
             Text = "Form1";
             pnlBotoes.ResumeLayout(false);
-            tableLayoutPanel1.ResumeLayout(false);
-            tableLayoutPanel1.PerformLayout();
+            tblLinha2.ResumeLayout(false);
+            tblLinha2.PerformLayout();
+            tblLinha3.ResumeLayout(false);
+            tblLinha3.PerformLayout();
+            tblLinha4.ResumeLayout(false);
+            tblLinha4.PerformLayout();
+            tblLinha5.ResumeLayout(false);
+            tblLinha5.PerformLayout();
+            tblLinha6.ResumeLayout(false);
+            tblLinha6.PerformLayout();
+            tblLinha1.ResumeLayout(false);
+            tblLinha1.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -754,7 +882,6 @@
         private Button btnEnter;
         private Button btnDel;
         private Button btnReset;
-        private TableLayoutPanel tableLayoutPanel1;
         private TextBox txt1A;
         private TextBox txt1B;
         private TextBox txt1C;
@@ -785,5 +912,11 @@
         private TextBox txt6C;
         private TextBox txt6D;
         private TextBox txt6E;
+        private TableLayoutPanel tblLinha2;
+        private TableLayoutPanel tblLinha3;
+        private TableLayoutPanel tblLinha4;
+        private TableLayoutPanel tblLinha5;
+        private TableLayoutPanel tblLinha6;
+        private TableLayoutPanel tblLinha1;
     }
 }

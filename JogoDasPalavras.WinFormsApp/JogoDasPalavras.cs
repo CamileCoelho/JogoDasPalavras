@@ -8,11 +8,6 @@ namespace JogoDasPalavras.WinFormsApp
 {
     public class JogoDasPalavras
     {
-        public string PalavraParcial
-        {
-            get { return new string(letrasEncontradas); }
-        }
-
         public int Erros
         {
             get { return erros; }
@@ -20,8 +15,8 @@ namespace JogoDasPalavras.WinFormsApp
 
         public string mensagemFinal;
 
-        private string palavraSecreta;
-        private char[] letrasEncontradas;
+        public string palavraSecreta;
+
         private int erros;
 
         public JogoDasPalavras()
@@ -30,37 +25,38 @@ namespace JogoDasPalavras.WinFormsApp
             palavraSecreta = ObterPalavraSecreta();
             erros = 0;
         }
-        public bool JogadorAcertou(string[] palpite)
-        {
-            bool letraFoiEncontrada = false;
 
-            //for (int i = 0; i < palavraSecreta.Length; i++)
-            //{
-            //    if (palpite[] == palavraSecreta[i])
-            //    {
-            //        letrasEncontradas[i] = palpite;
-            //        letraFoiEncontrada = true;
-            //    }
-            //}
+        //public bool JogadorAcertou(string[] palpite)
+        //{
+        //    bool letraFoiEncontrada = false;
 
-            if (letraFoiEncontrada == false)
-                erros++;
+        //    for (int i = 0; i < palavraSecreta.Length; i++)
+        //    {
+        //        if (palpite[] == palavraSecreta[i])
+        //        {
+        //            letrasEncontradas[i] = palpite;
+        //            letraFoiEncontrada = true;
+        //        }
+        //    }
 
-            bool jogadorAcertou = new string(letrasEncontradas) == palavraSecreta;
+        //    if (letraFoiEncontrada == false)
+        //        erros++;
 
-            if (jogadorAcertou)
-                mensagemFinal = $"Você acertou a palavra {palavraSecreta}, parabéns!";
+        //    bool jogadorAcertou = new string(letrasEncontradas) == palavraSecreta;
 
-            else if (JogadorPerdeu())
-                mensagemFinal = "Você perdeu! Tente novamente...";
+        //    if (jogadorAcertou)
+        //        mensagemFinal = $"Você acertou a palavra {palavraSecreta}, parabéns!";
 
-            return jogadorAcertou;
-        }
+        //    else if (JogadorPerdeu())
+        //        mensagemFinal = "Você perdeu! Tente novamente...";
 
-        public bool JogadorPerdeu()
-        {
-            return erros == 6;
-        }
+        //    return jogadorAcertou;
+        //}
+
+        //public bool JogadorPerdeu()
+        //{
+        //    //return erros == 6;
+        //}
 
         private string ObterPalavraSecreta()
         {

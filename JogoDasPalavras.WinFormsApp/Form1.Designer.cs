@@ -1,6 +1,6 @@
 ﻿namespace JogoDasPalavras.WinFormsApp
 {
-    partial class Form1
+    partial class JogoDasPalavrasForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -733,7 +733,7 @@
             tblTextBoxes.Size = new Size(383, 262);
             tblTextBoxes.TabIndex = 35;
             // 
-            // Form1
+            // JogoDasPalavrasForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -744,8 +744,10 @@
             Controls.Add(btnEnter);
             Controls.Add(pnlBotoes);
             MinimumSize = new Size(686, 736);
-            Name = "Form1";
-            Text = "Form1";
+            Name = "JogoDasPalavrasForm";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "JogoDasPalavrasForm";
+            TransparencyKey = Color.FromArgb(64, 0, 64);
             pnlBotoes.ResumeLayout(false);
             tblTextBoxes.ResumeLayout(false);
             tblTextBoxes.PerformLayout();

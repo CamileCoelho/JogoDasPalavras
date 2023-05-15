@@ -9,7 +9,7 @@ using System.Linq;
 
 namespace JogoDasPalavras.WinFormsApp
 {
-    public partial class Form1 : Form
+    public partial class JogoDasPalavrasForm : Form
     {
         private List<string> palavrasImputadas = new();
 
@@ -21,7 +21,7 @@ namespace JogoDasPalavras.WinFormsApp
 
         private int linhaAtual = 0;
 
-        public Form1()
+        public JogoDasPalavrasForm()
         {
             InitializeComponent();
 

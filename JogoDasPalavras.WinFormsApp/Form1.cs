@@ -11,6 +11,8 @@ namespace JogoDasPalavras.WinFormsApp
 {
     public partial class Form1 : Form
     {
+        private List<string> palavrasImputadas = new();
+
         private JogoDasPalavras jogo;
 
         public int textBoxesPreenchidas = 0;
@@ -25,8 +27,6 @@ namespace JogoDasPalavras.WinFormsApp
 
             jogo = new JogoDasPalavras();
         }
-
-        private List<string> palavrasImputadas = new List<string>();
 
         private void btnEnter_Click(object sender, EventArgs e)
         {
@@ -84,26 +84,24 @@ namespace JogoDasPalavras.WinFormsApp
                 return;
             }
 
-            int indiceInicial = linhaAtual - 1;
-
-            for (int i = 0; i <= 4 ; i++)
+            for (int i = 0; i <= 4; i++)
             {
                 TextBox textBox = tblTextBoxes.Controls["txt" + linhaAtual + (char)(64 + (i + 1))] as TextBox;
 
                 if (textBox.Text[0] == jogo.palavraSecreta[i])
                 {
-                    textBox.BackColor = Color.Green;
-                    PintarBotaoClicado(textBox.Text, Color.Green);
+                    textBox.BackColor = Color.MediumSeaGreen;
+                    PintarBotaoClicado(textBox.Text, Color.MediumSeaGreen);
                 }
                 else if (jogo.palavraSecreta.Contains(textBox.Text))
                 {
-                    textBox.BackColor = Color.Yellow;
-                    PintarBotaoClicado(textBox.Text, Color.Yellow);
+                    textBox.BackColor = Color.Gold;
+                    PintarBotaoClicado(textBox.Text, Color.Gold);
                 }
                 else
                 {
-                    textBox.BackColor = Color.LightGray;
-                    PintarBotaoClicado(textBox.Text, Color.LightGray);
+                    textBox.BackColor = Color.Gray;
+                    PintarBotaoClicado(textBox.Text, Color.Gray);
                 }
             }
         }
@@ -119,7 +117,7 @@ namespace JogoDasPalavras.WinFormsApp
         {
             foreach (Button botao in pnlBotoes.Controls)
             {
-                if (botao.Text == c )
+                if (botao.Text == c)
                 {
                     botao.BackColor = cor;
                 }

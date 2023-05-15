@@ -8,22 +8,11 @@ namespace JogoDasPalavras.WinFormsApp
 {
     public class JogoDasPalavras
     {
-        public int Erros
-        {
-            get { return erros; }
-        }
-
-        public string mensagemFinal;
-
-        public string palavraSecreta;
-
-        private int erros;
+        public string palavraSecreta { get; set; }
 
         public JogoDasPalavras()
         {
-            mensagemFinal = "";
             palavraSecreta = ObterPalavraSecreta();
-            erros = 0;
         }
 
         private string ObterPalavraSecreta()
@@ -70,8 +59,8 @@ namespace JogoDasPalavras.WinFormsApp
 
             int qtdLetras = new Random().Next(palavras.Length);
 
-            // return palavras[qtdLetras].ToUpper();
-            return "TESTE";
+            return palavras[qtdLetras].ToUpper();
+            //return "TESTE";
         }
     }
 }

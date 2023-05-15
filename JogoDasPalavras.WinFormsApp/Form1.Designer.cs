@@ -122,6 +122,8 @@
             pnlBotoes.Controls.Add(btnZ, 7, 2);
             pnlBotoes.Controls.Add(btnÇ, 8, 2);
             pnlBotoes.Controls.Add(btnF, 5, 0);
+            pnlBotoes.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            pnlBotoes.ForeColor = Color.FromArgb(64, 0, 64);
             pnlBotoes.Location = new Point(12, 447);
             pnlBotoes.MinimumSize = new Size(505, 160);
             pnlBotoes.Name = "pnlBotoes";
@@ -432,6 +434,7 @@
             // btnEnter
             // 
             btnEnter.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnEnter.ForeColor = Color.FromArgb(64, 0, 64);
             btnEnter.Location = new Point(538, 503);
             btnEnter.Name = "btnEnter";
             btnEnter.Size = new Size(120, 48);
@@ -443,6 +446,7 @@
             // btnDel
             // 
             btnDel.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnDel.ForeColor = Color.FromArgb(64, 0, 64);
             btnDel.Location = new Point(538, 556);
             btnDel.Name = "btnDel";
             btnDel.Size = new Size(120, 48);
@@ -453,183 +457,243 @@
             // 
             // txt1A
             // 
+            txt1A.BackColor = Color.GhostWhite;
             txt1A.Font = new Font("Segoe UI", 28F, FontStyle.Regular, GraphicsUnit.Point);
+            txt1A.ForeColor = Color.FromArgb(64, 0, 64);
             txt1A.Location = new Point(3, 3);
             txt1A.Name = "txt1A";
             txt1A.ReadOnly = true;
             txt1A.Size = new Size(70, 57);
             txt1A.TabIndex = 0;
+            txt1A.TextAlign = HorizontalAlignment.Center;
             // 
             // txt1B
             // 
+            txt1B.BackColor = Color.GhostWhite;
             txt1B.Font = new Font("Segoe UI", 28F, FontStyle.Regular, GraphicsUnit.Point);
+            txt1B.ForeColor = Color.FromArgb(64, 0, 64);
             txt1B.Location = new Point(79, 3);
             txt1B.Name = "txt1B";
             txt1B.ReadOnly = true;
             txt1B.Size = new Size(70, 57);
             txt1B.TabIndex = 1;
+            txt1B.TextAlign = HorizontalAlignment.Center;
             // 
             // txt1C
             // 
+            txt1C.BackColor = Color.GhostWhite;
             txt1C.Font = new Font("Segoe UI", 28F, FontStyle.Regular, GraphicsUnit.Point);
+            txt1C.ForeColor = Color.FromArgb(64, 0, 64);
             txt1C.Location = new Point(155, 3);
             txt1C.Name = "txt1C";
             txt1C.ReadOnly = true;
             txt1C.Size = new Size(70, 57);
             txt1C.TabIndex = 2;
+            txt1C.TextAlign = HorizontalAlignment.Center;
             // 
             // txt1D
             // 
+            txt1D.BackColor = Color.GhostWhite;
             txt1D.Font = new Font("Segoe UI", 28F, FontStyle.Regular, GraphicsUnit.Point);
+            txt1D.ForeColor = Color.FromArgb(64, 0, 64);
             txt1D.Location = new Point(231, 3);
             txt1D.Name = "txt1D";
             txt1D.ReadOnly = true;
             txt1D.Size = new Size(70, 57);
             txt1D.TabIndex = 3;
+            txt1D.TextAlign = HorizontalAlignment.Center;
             // 
             // txt1E
             // 
+            txt1E.BackColor = Color.GhostWhite;
             txt1E.Font = new Font("Segoe UI", 28F, FontStyle.Regular, GraphicsUnit.Point);
+            txt1E.ForeColor = Color.FromArgb(64, 0, 64);
             txt1E.Location = new Point(307, 3);
             txt1E.Name = "txt1E";
             txt1E.ReadOnly = true;
             txt1E.Size = new Size(72, 57);
             txt1E.TabIndex = 4;
+            txt1E.TextAlign = HorizontalAlignment.Center;
             // 
             // txt2A
             // 
+            txt2A.BackColor = Color.GhostWhite;
             txt2A.Font = new Font("Segoe UI", 28F, FontStyle.Regular, GraphicsUnit.Point);
+            txt2A.ForeColor = Color.FromArgb(64, 0, 64);
             txt2A.Location = new Point(3, 68);
             txt2A.Name = "txt2A";
             txt2A.ReadOnly = true;
             txt2A.Size = new Size(70, 57);
             txt2A.TabIndex = 5;
+            txt2A.TextAlign = HorizontalAlignment.Center;
             // 
             // txt2B
             // 
+            txt2B.BackColor = Color.GhostWhite;
             txt2B.Font = new Font("Segoe UI", 28F, FontStyle.Regular, GraphicsUnit.Point);
+            txt2B.ForeColor = Color.FromArgb(64, 0, 64);
             txt2B.Location = new Point(79, 68);
             txt2B.Name = "txt2B";
             txt2B.ReadOnly = true;
             txt2B.Size = new Size(70, 57);
             txt2B.TabIndex = 6;
+            txt2B.TextAlign = HorizontalAlignment.Center;
             // 
             // txt2C
             // 
+            txt2C.BackColor = Color.GhostWhite;
             txt2C.Font = new Font("Segoe UI", 28F, FontStyle.Regular, GraphicsUnit.Point);
+            txt2C.ForeColor = Color.FromArgb(64, 0, 64);
             txt2C.Location = new Point(155, 68);
             txt2C.Name = "txt2C";
             txt2C.ReadOnly = true;
             txt2C.Size = new Size(70, 57);
             txt2C.TabIndex = 7;
+            txt2C.TextAlign = HorizontalAlignment.Center;
             // 
             // txt2D
             // 
+            txt2D.BackColor = Color.GhostWhite;
             txt2D.Font = new Font("Segoe UI", 28F, FontStyle.Regular, GraphicsUnit.Point);
+            txt2D.ForeColor = Color.FromArgb(64, 0, 64);
             txt2D.Location = new Point(231, 68);
             txt2D.Name = "txt2D";
             txt2D.ReadOnly = true;
             txt2D.Size = new Size(70, 57);
             txt2D.TabIndex = 8;
+            txt2D.TextAlign = HorizontalAlignment.Center;
             // 
             // txt2E
             // 
+            txt2E.BackColor = Color.GhostWhite;
             txt2E.Font = new Font("Segoe UI", 28F, FontStyle.Regular, GraphicsUnit.Point);
+            txt2E.ForeColor = Color.FromArgb(64, 0, 64);
             txt2E.Location = new Point(307, 68);
             txt2E.Name = "txt2E";
             txt2E.ReadOnly = true;
             txt2E.Size = new Size(72, 57);
             txt2E.TabIndex = 9;
+            txt2E.TextAlign = HorizontalAlignment.Center;
             // 
             // txt3A
             // 
+            txt3A.BackColor = Color.GhostWhite;
             txt3A.Font = new Font("Segoe UI", 28F, FontStyle.Regular, GraphicsUnit.Point);
+            txt3A.ForeColor = Color.FromArgb(64, 0, 64);
             txt3A.Location = new Point(3, 133);
             txt3A.Name = "txt3A";
             txt3A.ReadOnly = true;
             txt3A.Size = new Size(70, 57);
             txt3A.TabIndex = 10;
+            txt3A.TextAlign = HorizontalAlignment.Center;
             // 
             // txt3B
             // 
+            txt3B.BackColor = Color.GhostWhite;
             txt3B.Font = new Font("Segoe UI", 28F, FontStyle.Regular, GraphicsUnit.Point);
+            txt3B.ForeColor = Color.FromArgb(64, 0, 64);
             txt3B.Location = new Point(79, 133);
             txt3B.Name = "txt3B";
             txt3B.ReadOnly = true;
             txt3B.Size = new Size(70, 57);
             txt3B.TabIndex = 11;
+            txt3B.TextAlign = HorizontalAlignment.Center;
             // 
             // txt3C
             // 
+            txt3C.BackColor = Color.GhostWhite;
             txt3C.Font = new Font("Segoe UI", 28F, FontStyle.Regular, GraphicsUnit.Point);
+            txt3C.ForeColor = Color.FromArgb(64, 0, 64);
             txt3C.Location = new Point(155, 133);
             txt3C.Name = "txt3C";
             txt3C.ReadOnly = true;
             txt3C.Size = new Size(70, 57);
             txt3C.TabIndex = 12;
+            txt3C.TextAlign = HorizontalAlignment.Center;
             // 
             // txt3D
             // 
+            txt3D.BackColor = Color.GhostWhite;
             txt3D.Font = new Font("Segoe UI", 28F, FontStyle.Regular, GraphicsUnit.Point);
+            txt3D.ForeColor = Color.FromArgb(64, 0, 64);
             txt3D.Location = new Point(231, 133);
             txt3D.Name = "txt3D";
             txt3D.ReadOnly = true;
             txt3D.Size = new Size(70, 57);
             txt3D.TabIndex = 13;
+            txt3D.TextAlign = HorizontalAlignment.Center;
             // 
             // txt3E
             // 
+            txt3E.BackColor = Color.GhostWhite;
             txt3E.Font = new Font("Segoe UI", 28F, FontStyle.Regular, GraphicsUnit.Point);
+            txt3E.ForeColor = Color.FromArgb(64, 0, 64);
             txt3E.Location = new Point(307, 133);
             txt3E.Name = "txt3E";
             txt3E.ReadOnly = true;
             txt3E.Size = new Size(72, 57);
             txt3E.TabIndex = 14;
+            txt3E.TextAlign = HorizontalAlignment.Center;
             // 
             // txt4A
             // 
+            txt4A.BackColor = Color.GhostWhite;
             txt4A.Font = new Font("Segoe UI", 28F, FontStyle.Regular, GraphicsUnit.Point);
+            txt4A.ForeColor = Color.FromArgb(64, 0, 64);
             txt4A.Location = new Point(3, 198);
             txt4A.Name = "txt4A";
             txt4A.ReadOnly = true;
             txt4A.Size = new Size(70, 57);
             txt4A.TabIndex = 15;
+            txt4A.TextAlign = HorizontalAlignment.Center;
             // 
             // txt4B
             // 
+            txt4B.BackColor = Color.GhostWhite;
             txt4B.Font = new Font("Segoe UI", 28F, FontStyle.Regular, GraphicsUnit.Point);
+            txt4B.ForeColor = Color.FromArgb(64, 0, 64);
             txt4B.Location = new Point(79, 198);
             txt4B.Name = "txt4B";
             txt4B.ReadOnly = true;
             txt4B.Size = new Size(70, 57);
             txt4B.TabIndex = 16;
+            txt4B.TextAlign = HorizontalAlignment.Center;
             // 
             // txt4C
             // 
+            txt4C.BackColor = Color.GhostWhite;
             txt4C.Font = new Font("Segoe UI", 28F, FontStyle.Regular, GraphicsUnit.Point);
+            txt4C.ForeColor = Color.FromArgb(64, 0, 64);
             txt4C.Location = new Point(155, 198);
             txt4C.Name = "txt4C";
             txt4C.ReadOnly = true;
             txt4C.Size = new Size(70, 57);
             txt4C.TabIndex = 17;
+            txt4C.TextAlign = HorizontalAlignment.Center;
             // 
             // txt4D
             // 
+            txt4D.BackColor = Color.GhostWhite;
             txt4D.Font = new Font("Segoe UI", 28F, FontStyle.Regular, GraphicsUnit.Point);
+            txt4D.ForeColor = Color.FromArgb(64, 0, 64);
             txt4D.Location = new Point(231, 198);
             txt4D.Name = "txt4D";
             txt4D.ReadOnly = true;
             txt4D.Size = new Size(70, 57);
             txt4D.TabIndex = 18;
+            txt4D.TextAlign = HorizontalAlignment.Center;
             // 
             // txt4E
             // 
+            txt4E.BackColor = Color.GhostWhite;
             txt4E.Font = new Font("Segoe UI", 28F, FontStyle.Regular, GraphicsUnit.Point);
+            txt4E.ForeColor = Color.FromArgb(64, 0, 64);
             txt4E.Location = new Point(307, 198);
             txt4E.Name = "txt4E";
             txt4E.ReadOnly = true;
             txt4E.Size = new Size(72, 57);
             txt4E.TabIndex = 19;
+            txt4E.TextAlign = HorizontalAlignment.Center;
             // 
             // tblTextBoxes
             // 
@@ -673,6 +737,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(192, 192, 255);
             ClientSize = new Size(670, 697);
             Controls.Add(tblTextBoxes);
             Controls.Add(btnDel);

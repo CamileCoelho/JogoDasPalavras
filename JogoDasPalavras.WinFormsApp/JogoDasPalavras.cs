@@ -26,38 +26,6 @@ namespace JogoDasPalavras.WinFormsApp
             erros = 0;
         }
 
-        //public bool JogadorAcertou(string[] palpite)
-        //{
-        //    bool letraFoiEncontrada = false;
-
-        //    for (int i = 0; i < palavraSecreta.Length; i++)
-        //    {
-        //        if (palpite[] == palavraSecreta[i])
-        //        {
-        //            letrasEncontradas[i] = palpite;
-        //            letraFoiEncontrada = true;
-        //        }
-        //    }
-
-        //    if (letraFoiEncontrada == false)
-        //        erros++;
-
-        //    bool jogadorAcertou = new string(letrasEncontradas) == palavraSecreta;
-
-        //    if (jogadorAcertou)
-        //        mensagemFinal = $"Você acertou a palavra {palavraSecreta}, parabéns!";
-
-        //    else if (JogadorPerdeu())
-        //        mensagemFinal = "Você perdeu! Tente novamente...";
-
-        //    return jogadorAcertou;
-        //}
-
-        //public bool JogadorPerdeu()
-        //{
-        //    //return erros == 6;
-        //}
-
         private string ObterPalavraSecreta()
         {
             string[] palavras = {
@@ -102,7 +70,7 @@ namespace JogoDasPalavras.WinFormsApp
 
             int qtdLetras = new Random().Next(palavras.Length);
 
-            return palavras[qtdLetras];
+            return palavras[qtdLetras].ToUpper();
         }
     }
 }

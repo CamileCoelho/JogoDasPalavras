@@ -60,30 +60,16 @@ namespace JogoDasPalavras.WinFormsApp
 
             VerificarPalavra(ultimos5Caracteres);
 
-            if (jogo.palavraSecreta == ultimos5Caracteres)
-            {
-                Close();
-            }
-            else
+            if (jogo.palavraSecreta != ultimos5Caracteres)
             {
                 textBoxesPreenchidas = 0;
             }
 
-
-            if (contadorPalavra == 4 && jogo.palavraSecreta != palavraImputada)
-            {
-                FinalizarJogoPerdeu();
-            }
+            FinalizarJogo(ultimos5Caracteres);
         }
 
         private void VerificarPalavra(string palavraImputada)
         {
-            if (jogo.palavraSecreta == palavraImputada)
-            {
-                MessageBox.Show("Parabéns, você ganhou!");
-                return;
-            }
-
             for (int i = 0; i <= 4; i++)
             {
                 TextBox textBox = tblTextBoxes.Controls["txt" + linhaAtual + (char)(64 + (i + 1))] as TextBox;
@@ -106,11 +92,23 @@ namespace JogoDasPalavras.WinFormsApp
             }
         }
 
-        private void FinalizarJogoPerdeu()
+        private void FinalizarJogo(string ultimos5Caracteres)
         {
-            MessageBox.Show($"Você perdeu... A palavra correta era {jogo.palavraSecreta}.");
-            pnlBotoes.Enabled = false;
-            Close();
+            if (jogo.palavraSecreta == ultimos5Caracteres)
+            {
+                MessageBox.Show("Parabéns, você ganhou!");
+                Close();
+            }
+            else
+            {
+                textBoxesPreenchidas = 0;
+            }
+            if (contadorPalavra == 4 && jogo.palavraSecreta != ultimos5Caracteres)
+            {
+                MessageBox.Show($"Você perdeu... A palavra correta era {jogo.palavraSecreta}.");
+                Close();
+            }
+
         }
 
         private void PintarBotaoClicado(string c, Color cor)

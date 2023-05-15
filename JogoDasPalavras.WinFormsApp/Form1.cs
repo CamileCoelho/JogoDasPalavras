@@ -5,6 +5,7 @@ using System.Runtime.Intrinsics.X86;
 using System.Security.Cryptography;
 using System.Xml.Linq;
 using System.Diagnostics.Metrics;
+using System.Linq;
 
 namespace JogoDasPalavras.WinFormsApp
 {
@@ -14,7 +15,9 @@ namespace JogoDasPalavras.WinFormsApp
 
         public int textBoxesPreenchidas = 0;
 
-        private List<Button> listaBotoes = new List<Button>();
+        private int contadorPalavra = 0;
+
+        private int linhaAtual = 0;
 
         public Form1()
         {
@@ -23,13 +26,11 @@ namespace JogoDasPalavras.WinFormsApp
             jogo = new JogoDasPalavras();
         }
 
-        private int contadorPalavra = 1;
-
         private List<string> palavrasImputadas = new List<string>();
 
         private void btnEnter_Click(object sender, EventArgs e)
         {
-            if (tblTextBoxes.Controls.Count < 5)
+            if (textBoxesPreenchidas < 5)
             {
                 MessageBox.Show("Preencha todas as letras antes de pressionar Enter.");
                 return;
@@ -53,7 +54,8 @@ namespace JogoDasPalavras.WinFormsApp
             {
                 ultimos5Caracteres = palavraImputada;
             }
-
+            contadorPalavra++;
+            linhaAtual++;
             palavrasImputadas.Add(ultimos5Caracteres);
 
             VerificarPalavra(ultimos5Caracteres);
@@ -64,8 +66,13 @@ namespace JogoDasPalavras.WinFormsApp
             }
             else
             {
-                FinalizarJogoPerdeu(ultimos5Caracteres);
                 textBoxesPreenchidas = 0;
+            }
+
+
+            if (contadorPalavra == 4 && jogo.palavraSecreta != palavraImputada)
+            {
+                FinalizarJogoPerdeu();
             }
         }
 
@@ -74,34 +81,49 @@ namespace JogoDasPalavras.WinFormsApp
             if (jogo.palavraSecreta == palavraImputada)
             {
                 MessageBox.Show("Parabéns, você ganhou!");
-                pnlBotoes.Enabled = false;
                 return;
             }
-            for (int i = 0; i < palavraImputada.Length; i++)
+
+            int indiceInicial = linhaAtual - 1;
+
+            for (int i = 0; i <= 4 ; i++)
             {
-                if (palavraImputada[i] == jogo.palavraSecreta[i])
+                TextBox textBox = tblTextBoxes.Controls["txt" + linhaAtual + (char)(64 + (i + 1))] as TextBox;
+
+                if (textBox.Text[0] == jogo.palavraSecreta[i])
                 {
-                    tblTextBoxes.Controls["txt1" + (char)('A' + i)].BackColor = Color.Green;
-                    PintarBotaoClicado((Button)pnlBotoes.Controls["btn" + palavraImputada[i]], Color.Green);
+                    textBox.BackColor = Color.Green;
+                    PintarBotaoClicado(textBox.Text, Color.Green);
                 }
-                else if (jogo.palavraSecreta.Contains(palavraImputada[i]))
+                else if (jogo.palavraSecreta.Contains(textBox.Text))
                 {
-                    tblTextBoxes.Controls["txt1" + (char)('A' + i)].BackColor = Color.Yellow;
-                    PintarBotaoETxtBoxClicado(palavraImputada[i], Color.Yellow);
+                    textBox.BackColor = Color.Yellow;
+                    PintarBotaoClicado(textBox.Text, Color.Yellow);
                 }
                 else
                 {
-                    tblTextBoxes.Controls["txt1" + (char)('A' + i)].BackColor = Color.LightGray;
-                    PintarBotaoETxtBoxClicado(palavraImputada[i], Color.LightGray);
+                    textBox.BackColor = Color.LightGray;
+                    PintarBotaoClicado(textBox.Text, Color.LightGray);
                 }
             }
         }
 
-        private void FinalizarJogoPerdeu(string palavraImputada)
+        private void FinalizarJogoPerdeu()
         {
-            MessageBox.Show("Você perdeu...");
+            MessageBox.Show($"Você perdeu... A palavra correta era {jogo.palavraSecreta}.");
             pnlBotoes.Enabled = false;
             Close();
+        }
+
+        private void PintarBotaoClicado(string c, Color cor)
+        {
+            foreach (Button botao in pnlBotoes.Controls)
+            {
+                if (botao.Text == c )
+                {
+                    botao.BackColor = cor;
+                }
+            }
         }
 
         private void btnDel_Click(object sender, EventArgs e)
@@ -118,29 +140,6 @@ namespace JogoDasPalavras.WinFormsApp
                         textBoxesPreenchidas--;
                         break;
                     }
-                }
-            }
-        }
-
-        private void PintarBotaoClicado(Button botao, Color cor)
-        {
-            botao.BackColor = cor;
-        }
-
-        private void PintarBotaoETxtBoxClicado(Char c, Color cor)
-        {
-            foreach (TextBox txt in tblTextBoxes.Controls)
-            {
-                if (txt.Text == c.ToString())
-                {
-                    txt.BackColor = cor;
-                }
-            }
-            foreach (Button botao in pnlBotoes.Controls)
-            {
-                if (botao.Text == c.ToString())
-                {
-                    botao.BackColor = cor;
                 }
             }
         }

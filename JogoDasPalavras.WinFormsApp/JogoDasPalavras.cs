@@ -70,7 +70,8 @@ namespace JogoDasPalavras.WinFormsApp
 
             int qtdLetras = new Random().Next(palavras.Length);
 
-            return palavras[qtdLetras].ToUpper();
+            // return palavras[qtdLetras].ToUpper();
+            return "TESTE";
         }
     }
 }

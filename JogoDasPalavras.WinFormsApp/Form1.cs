@@ -1,5 +1,6 @@
 using static System.Net.Mime.MediaTypeNames;
 using System.Runtime.ConstrainedExecution;
+using System.Windows.Forms;
 
 namespace JogoDasPalavras.WinFormsApp
 {
@@ -7,9 +8,9 @@ namespace JogoDasPalavras.WinFormsApp
     {
         private JogoDasPalavras jogo;
 
-        public List<Button> botoes;
+        private List<Button> listaBotoes = new List<Button>();
 
-        public List<TextBox> txtBoxes;
+        private List<TextBox> letrasTextBoxes;
 
         public string palavraImputada1, palavraImputada2, palavraImputada3,
             palavraImputada4, palavraImputada5, palavraImputada6;
@@ -20,132 +21,138 @@ namespace JogoDasPalavras.WinFormsApp
 
             jogo = new JogoDasPalavras();
 
-            btnA.Click += AtribuirLetraLinha1;
-            btnB.Click += AtribuirLetraLinha1;
-            btnC.Click += AtribuirLetraLinha1;
-            btnD.Click += AtribuirLetraLinha1;
-            btnE.Click += AtribuirLetraLinha1;
-            btnF.Click += AtribuirLetraLinha1;
-            btnG.Click += AtribuirLetraLinha1;
-            btnH.Click += AtribuirLetraLinha1;
-            btnI.Click += AtribuirLetraLinha1;
-            btnJ.Click += AtribuirLetraLinha1;
-            btnK.Click += AtribuirLetraLinha1;
-            btnL.Click += AtribuirLetraLinha1;
-            btnM.Click += AtribuirLetraLinha1;
-            btnN.Click += AtribuirLetraLinha1;
-            btnO.Click += AtribuirLetraLinha1;
-            btnP.Click += AtribuirLetraLinha1;
-            btnQ.Click += AtribuirLetraLinha1;
-            btnR.Click += AtribuirLetraLinha1;
-            btnS.Click += AtribuirLetraLinha1;
-            btnT.Click += AtribuirLetraLinha1;
-            btnU.Click += AtribuirLetraLinha1;
-            btnV.Click += AtribuirLetraLinha1;
-            btnW.Click += AtribuirLetraLinha1;
-            btnX.Click += AtribuirLetraLinha1;
-            btnY.Click += AtribuirLetraLinha1;
-            btnZ.Click += AtribuirLetraLinha1;
-            btn«.Click += AtribuirLetraLinha1;
+            RegistrarEventos();
+
         }
 
-        private void AtribuirLetrasLinha2()
+        private List<string> letrasClicadas = new();
+
+        private void btnLetra_Click(object sender, EventArgs e)
         {
-            btnA.Click += AtribuirLetraLinha2;
-            btnB.Click += AtribuirLetraLinha2;
-            btnC.Click += AtribuirLetraLinha2;
-            btnD.Click += AtribuirLetraLinha2;
-            btnE.Click += AtribuirLetraLinha2;
-            btnF.Click += AtribuirLetraLinha2;
-            btnG.Click += AtribuirLetraLinha2;
-            btnH.Click += AtribuirLetraLinha2;
-            btnI.Click += AtribuirLetraLinha2;
-            btnJ.Click += AtribuirLetraLinha2;
-            btnK.Click += AtribuirLetraLinha2;
-            btnL.Click += AtribuirLetraLinha2;
-            btnM.Click += AtribuirLetraLinha2;
-            btnN.Click += AtribuirLetraLinha2;
-            btnO.Click += AtribuirLetraLinha2;
-            btnP.Click += AtribuirLetraLinha2;
-            btnQ.Click += AtribuirLetraLinha2;
-            btnR.Click += AtribuirLetraLinha2;
-            btnS.Click += AtribuirLetraLinha2;
-            btnT.Click += AtribuirLetraLinha2;
-            btnU.Click += AtribuirLetraLinha2;
-            btnV.Click += AtribuirLetraLinha2;
-            btnW.Click += AtribuirLetraLinha2;
-            btnX.Click += AtribuirLetraLinha2;
-            btnY.Click += AtribuirLetraLinha2;
-            btnZ.Click += AtribuirLetraLinha2;
-            btn«.Click += AtribuirLetraLinha2;
+            Button botaoLetra = (Button)sender;
+            string letra = botaoLetra.Text;
+
+            foreach (TextBox textBox in letrasTextBoxes)
+            {
+                if (textBox.Text == "")
+                {
+                    textBox.Text = letra;
+                    break;
+                }
+            }
         }
 
-        private void AtribuirLetrasLinha3()
+        private void RegistrarEventos()
         {
-            btnA.Click += AtribuirLetraLinha3;
-            btnB.Click += AtribuirLetraLinha3;
-            btnC.Click += AtribuirLetraLinha3;
-            btnD.Click += AtribuirLetraLinha3;
-            btnE.Click += AtribuirLetraLinha3;
-            btnF.Click += AtribuirLetraLinha3;
-            btnG.Click += AtribuirLetraLinha3;
-            btnH.Click += AtribuirLetraLinha3;
-            btnI.Click += AtribuirLetraLinha3;
-            btnJ.Click += AtribuirLetraLinha3;
-            btnK.Click += AtribuirLetraLinha3;
-            btnL.Click += AtribuirLetraLinha3;
-            btnM.Click += AtribuirLetraLinha3;
-            btnN.Click += AtribuirLetraLinha3;
-            btnO.Click += AtribuirLetraLinha3;
-            btnP.Click += AtribuirLetraLinha3;
-            btnQ.Click += AtribuirLetraLinha3;
-            btnR.Click += AtribuirLetraLinha3;
-            btnS.Click += AtribuirLetraLinha3;
-            btnT.Click += AtribuirLetraLinha3;
-            btnU.Click += AtribuirLetraLinha3;
-            btnV.Click += AtribuirLetraLinha3;
-            btnW.Click += AtribuirLetraLinha3;
-            btnX.Click += AtribuirLetraLinha3;
-            btnY.Click += AtribuirLetraLinha3;
-            btnZ.Click += AtribuirLetraLinha3;
-            btn«.Click += AtribuirLetraLinha3;
+            foreach (Button botao in pnlBotoes.Controls)
+            {
+                botao.Click += SalvarTextoBotao;
+            }
         }
 
-        private void AtribuirLetrasLinha4()
-        {
-            btn«.Click += AtribuirLetraLinha4;
-            btnA.Click += AtribuirLetraLinha4;
-            btnB.Click += AtribuirLetraLinha4;
-            btnC.Click += AtribuirLetraLinha4;
-            btnD.Click += AtribuirLetraLinha4;
-            btnE.Click += AtribuirLetraLinha4;
-            btnF.Click += AtribuirLetraLinha4;
-            btnG.Click += AtribuirLetraLinha4;
-            btnH.Click += AtribuirLetraLinha4;
-            btnI.Click += AtribuirLetraLinha4;
-            btnJ.Click += AtribuirLetraLinha4;
-            btnK.Click += AtribuirLetraLinha4;
-            btnL.Click += AtribuirLetraLinha4;
-            btnM.Click += AtribuirLetraLinha4;
-            btnN.Click += AtribuirLetraLinha4;
-            btnO.Click += AtribuirLetraLinha4;
-            btnP.Click += AtribuirLetraLinha4;
-            btnQ.Click += AtribuirLetraLinha4;
-            btnR.Click += AtribuirLetraLinha4;
-            btnS.Click += AtribuirLetraLinha4;
-            btnT.Click += AtribuirLetraLinha4;
-            btnU.Click += AtribuirLetraLinha4;
-            btnV.Click += AtribuirLetraLinha4;
-            btnW.Click += AtribuirLetraLinha4;
-            btnX.Click += AtribuirLetraLinha4;
-            btnY.Click += AtribuirLetraLinha4;
-            btnZ.Click += AtribuirLetraLinha4;
-        }
-
-        private void AtribuirLetraLinha1(object? sender, EventArgs e)
+        private void SalvarTextoBotao(object sender, EventArgs e)
         {
             Button botaoClicado = (Button)sender;
+            string textoBotao = botaoClicado.Text;
 
+            letrasClicadas.Add(textoBotao);
+        }
+
+        //private void AtribuirLetrasLinha2()
+        //{
+        //    btnA.Click += AtribuirLetraLinha2;
+        //    btnB.Click += AtribuirLetraLinha2;
+        //    btnC.Click += AtribuirLetraLinha2;
+        //    btnD.Click += AtribuirLetraLinha2;
+        //    btnE.Click += AtribuirLetraLinha2;
+        //    btnF.Click += AtribuirLetraLinha2;
+        //    btnG.Click += AtribuirLetraLinha2;
+        //    btnH.Click += AtribuirLetraLinha2;
+        //    btnI.Click += AtribuirLetraLinha2;
+        //    btnJ.Click += AtribuirLetraLinha2;
+        //    btnK.Click += AtribuirLetraLinha2;
+        //    btnL.Click += AtribuirLetraLinha2;
+        //    btnM.Click += AtribuirLetraLinha2;
+        //    btnN.Click += AtribuirLetraLinha2;
+        //    btnO.Click += AtribuirLetraLinha2;
+        //    btnP.Click += AtribuirLetraLinha2;
+        //    btnQ.Click += AtribuirLetraLinha2;
+        //    btnR.Click += AtribuirLetraLinha2;
+        //    btnS.Click += AtribuirLetraLinha2;
+        //    btnT.Click += AtribuirLetraLinha2;
+        //    btnU.Click += AtribuirLetraLinha2;
+        //    btnV.Click += AtribuirLetraLinha2;
+        //    btnW.Click += AtribuirLetraLinha2;
+        //    btnX.Click += AtribuirLetraLinha2;
+        //    btnY.Click += AtribuirLetraLinha2;
+        //    btnZ.Click += AtribuirLetraLinha2;
+        //    btn«.Click += AtribuirLetraLinha2;
+        //}
+
+        //private void AtribuirLetrasLinha3()
+        //{
+        //    btnA.Click += AtribuirLetraLinha3;
+        //    btnB.Click += AtribuirLetraLinha3;
+        //    btnC.Click += AtribuirLetraLinha3;
+        //    btnD.Click += AtribuirLetraLinha3;
+        //    btnE.Click += AtribuirLetraLinha3;
+        //    btnF.Click += AtribuirLetraLinha3;
+        //    btnG.Click += AtribuirLetraLinha3;
+        //    btnH.Click += AtribuirLetraLinha3;
+        //    btnI.Click += AtribuirLetraLinha3;
+        //    btnJ.Click += AtribuirLetraLinha3;
+        //    btnK.Click += AtribuirLetraLinha3;
+        //    btnL.Click += AtribuirLetraLinha3;
+        //    btnM.Click += AtribuirLetraLinha3;
+        //    btnN.Click += AtribuirLetraLinha3;
+        //    btnO.Click += AtribuirLetraLinha3;
+        //    btnP.Click += AtribuirLetraLinha3;
+        //    btnQ.Click += AtribuirLetraLinha3;
+        //    btnR.Click += AtribuirLetraLinha3;
+        //    btnS.Click += AtribuirLetraLinha3;
+        //    btnT.Click += AtribuirLetraLinha3;
+        //    btnU.Click += AtribuirLetraLinha3;
+        //    btnV.Click += AtribuirLetraLinha3;
+        //    btnW.Click += AtribuirLetraLinha3;
+        //    btnX.Click += AtribuirLetraLinha3;
+        //    btnY.Click += AtribuirLetraLinha3;
+        //    btnZ.Click += AtribuirLetraLinha3;
+        //    btn«.Click += AtribuirLetraLinha3;
+        //}
+
+        //private void AtribuirLetrasLinha4()
+        //{
+        //    btn«.Click += AtribuirLetraLinha4;
+        //    btnA.Click += AtribuirLetraLinha4;
+        //    btnB.Click += AtribuirLetraLinha4;
+        //    btnC.Click += AtribuirLetraLinha4;
+        //    btnD.Click += AtribuirLetraLinha4;
+        //    btnE.Click += AtribuirLetraLinha4;
+        //    btnF.Click += AtribuirLetraLinha4;
+        //    btnG.Click += AtribuirLetraLinha4;
+        //    btnH.Click += AtribuirLetraLinha4;
+        //    btnI.Click += AtribuirLetraLinha4;
+        //    btnJ.Click += AtribuirLetraLinha4;
+        //    btnK.Click += AtribuirLetraLinha4;
+        //    btnL.Click += AtribuirLetraLinha4;
+        //    btnM.Click += AtribuirLetraLinha4;
+        //    btnN.Click += AtribuirLetraLinha4;
+        //    btnO.Click += AtribuirLetraLinha4;
+        //    btnP.Click += AtribuirLetraLinha4;
+        //    btnQ.Click += AtribuirLetraLinha4;
+        //    btnR.Click += AtribuirLetraLinha4;
+        //    btnS.Click += AtribuirLetraLinha4;
+        //    btnT.Click += AtribuirLetraLinha4;
+        //    btnU.Click += AtribuirLetraLinha4;
+        //    btnV.Click += AtribuirLetraLinha4;
+        //    btnW.Click += AtribuirLetraLinha4;
+        //    btnX.Click += AtribuirLetraLinha4;
+        //    btnY.Click += AtribuirLetraLinha4;
+        //    btnZ.Click += AtribuirLetraLinha4;
+        //}
+
+        private void AtribuirLetraLinha1(Button botaoClicado)
+        {
             if (string.IsNullOrEmpty(txt1A.Text))
             {
                 txt1A.Text = botaoClicado.Text;
@@ -172,6 +179,7 @@ namespace JogoDasPalavras.WinFormsApp
                 return;
             }
         }
+
         private void AtribuirLetraLinha2(object? sender, EventArgs e)
         {
             Button botaoClicado = (Button)sender;
@@ -202,10 +210,9 @@ namespace JogoDasPalavras.WinFormsApp
                 return;
             }
         }
-        private void AtribuirLetraLinha3(object? sender, EventArgs e)
-        {
-            Button botaoClicado = (Button)sender;
 
+        private void AtribuirLetraLinha3(Button botaoClicado)
+        {
             if (string.IsNullOrEmpty(txt3A.Text))
             {
                 txt3A.Text = botaoClicado.Text;
@@ -232,6 +239,7 @@ namespace JogoDasPalavras.WinFormsApp
                 return;
             }
         }
+
         private void AtribuirLetraLinha4(object? sender, EventArgs e)
         {
             Button botaoClicado = (Button)sender;
@@ -263,28 +271,46 @@ namespace JogoDasPalavras.WinFormsApp
             }
         }
 
+        private void ListarBotoes()
+        {
+            foreach (Control control in pnlBotoes.Controls)
+            {
+                if (control is Button button)
+                {
+                    listaBotoes.Add(button);
+                }
+            }
+        }
+
+        private int contadorPalavra = 1;
+
         private void btnEnter_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(txt1E.Text))
+            if (!string.IsNullOrEmpty(txt1E.Text) && contadorPalavra == 1)
             {
+                AtribuirLetraLinha1(botaoClicado);
                 palavraImputada1 = txt1A.Text + txt1B.Text + txt1C.Text + txt1D.Text + txt1E.Text;
                 VerificarPalavra1();
+                contadorPalavra++;
             }
-            if (!string.IsNullOrEmpty(txt2E.Text) && palavraImputada1 != jogo.palavraSecreta)
+            else if (!string.IsNullOrEmpty(txt2E.Text) && palavraImputada1 != jogo.palavraSecreta && contadorPalavra == 2)
             {
                 palavraImputada2 = txt2A.Text + txt2B.Text + txt2C.Text + txt2D.Text + txt2E.Text;
                 VerificarPalavra2();
+                contadorPalavra++;
             }
-            if (!string.IsNullOrEmpty(txt3E.Text) && palavraImputada2 != jogo.palavraSecreta)
+            else if (!string.IsNullOrEmpty(txt3E.Text) && palavraImputada2 != jogo.palavraSecreta && contadorPalavra == 3)
             {
                 palavraImputada3 = txt3A.Text + txt3B.Text + txt3C.Text + txt3D.Text + txt3E.Text;
                 VerificarPalavra3();
+                contadorPalavra++;
             }
-            if (!string.IsNullOrEmpty(txt4E.Text) && palavraImputada3 != jogo.palavraSecreta)
+            else if (!string.IsNullOrEmpty(txt4E.Text) && palavraImputada3 != jogo.palavraSecreta && contadorPalavra == 4)
             {
                 palavraImputada4 = txt4A.Text + txt4B.Text + txt4C.Text + txt4D.Text + txt4E.Text;
                 VerificarPalavra4();
                 FinalizarJogo();
+                contadorPalavra++;
                 return;
             }
         }
